@@ -1,0 +1,109 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<div class="card">
+  <div class="card-body">
+
+    <div class="row mb-3">
+      <div class="col">
+        <label for="id" class="form-label">ID</label>
+        <input type=" text" class="form-control" id="id" value="{{ customer_record.id }}">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <label for="first_name" class="form-label">First name</label>
+        <input type="text" class="form-control" placeholder="First name" aria-label="First name"
+          value="{{ customer_record.first_name }}">
+      </div>
+
+      <div class="col">
+        <label for="last_name" class="form-label">Last name</label>
+        <input type="text" class="form-control" placeholder="Last name" aria-label="Last name"
+          value="{{ customer_record.last_name }}">
+      </div>
+
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <label for="email" class="form-label">Email</label>
+        <input type="text" class="form-control" id="email" value="{{ customer_record.email }}">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="text" class="form-control" id="phone" value="{{ customer_record.phone }}">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <label for="address" class="form-label">Address</label>
+        <input type="text" class="form-control" id="address" value="{{ customer_record.address }}">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <label for="phone" class="form-label">Phone</label>
+        <input type="text" class="form-control" id="phone" value="{{ customer_record.phone }}">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <label for="city" class="form-label">City</label>
+        <input type="text" class="form-control" id="city" value="{{ customer_record.city }}">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <label for="state" class="form-label">State</label>
+        <input type="text" class="form-control" id="state" value="{{ customer_record.state }}">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <label for="zipcode" class="form-label">Zipcode</label>
+        <input type="text" class="form-control" id="zipcode" value="{{ customer_record.zipcode }}">
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <label for="created_at" class="form-label">Create At</label>
+        <input type="text" class="form-control" id="created_at" value="{{ customer_record.created_at }}">
+      </div>
+    </div>
+
+    <hr>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="{% url 'home' %}" class="btn btn-secondary d-block">Back</a>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="{% url 'delete_record' customer_record.id %}" class="btn btn-danger d-block">Delete</a>
+      </div>
+    </div>
+
+    <div class="row mb-3">
+      <div class="col">
+        <a href="{% url 'update_record' customer_record.id %}" class="btn btn-primary d-block">Update</a>
+      </div>
+    </div>
+
+  </div>
+
+</div>
+
+{% endblock %}
